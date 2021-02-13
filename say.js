@@ -27,8 +27,6 @@ module.exports = function (RED) {
 
 		const voice = config.voice != ':' ? config.voice : config.voiceString
 
-		console.log(voice)
-
 		this.on('input', function (msg) {
 			say.speak(
 				this.name || msg.payload,
