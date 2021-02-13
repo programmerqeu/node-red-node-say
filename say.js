@@ -31,7 +31,7 @@ module.exports = function (RED) {
 			say.speak(
 				this.name || msg.payload,
 				voice,
-				Number(config.speed),
+				config.speed ? Number(config.speed) : 1,
 				function(err) {
 					if (err) {
 				    return node.error(err);
